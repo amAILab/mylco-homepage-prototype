@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mylco — прототип главной</title>
+  <style>
+    :root{
+      --bg:#f6f4ef;--card:#fffdf8;--ink:#1f2933;--muted:#637083;--line:#e3dccf;
+      --green:#246b53;--green2:#123f34;--amber:#d99b3d;--blue:#234b73;
+      --shadow:0 18px 50px rgba(31,41,51,.10);--r:24px;
+    }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+    a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 22px}.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;color:var(--muted);font-size:14px}
+    header{position:sticky;top:0;z-index:10;background:rgba(246,244,239,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:23px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--green),#64a181);box-shadow:var(--shadow)}
+    .links{display:flex;gap:18px;color:var(--muted);font-size:14px}.navcta{background:var(--green);color:white;padding:11px 16px;border-radius:14px;font-weight:700}
+    .hero{padding:72px 0 38px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:center}.kicker{color:var(--green);font-weight:800;margin-bottom:14px}h1{font-size:56px;line-height:.98;margin:0 0 20px;letter-spacing:-2.4px}h2{font-size:34px;line-height:1.08;margin:0 0 14px;letter-spacing:-1px}h3{margin:0 0 10px;font-size:20px}.lead{font-size:20px;color:var(--muted);max-width:680px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}.btn{display:inline-flex;justify-content:center;align-items:center;padding:15px 20px;border-radius:16px;font-weight:800;border:1px solid transparent}.primary{background:var(--green);color:#fff}.secondary{background:#fff;color:var(--green);border-color:var(--line)}.ghost{background:transparent;border-color:var(--line)}
+    .hero-card{background:var(--card);border:1px solid var(--line);border-radius:32px;padding:26px;box-shadow:var(--shadow)}.mix{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.mix div{background:#f1eadf;border-radius:18px;padding:16px}.big-num{font-size:34px;font-weight:900;color:var(--green)}
+    section{padding:42px 0}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:22px}.section-head p{max-width:560px;color:var(--muted);margin:0}.grid{display:grid;gap:16px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 10px 30px rgba(31,41,51,.06)}.card p{color:var(--muted);margin:0 0 14px}.tag{display:inline-block;background:#edf5ef;color:var(--green);border-radius:999px;padding:6px 10px;font-size:13px;font-weight:700;margin-bottom:12px}
+    .scenario{min-height:190px}.catalog .card{min-height:160px}.consult{background:linear-gradient(135deg,var(--green2),var(--green));color:white;border-radius:34px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.consult p{color:#d7e8df}.questions{display:grid;gap:10px}.q{background:rgba(255,255,255,.12);padding:13px;border-radius:14px;border:1px solid rgba(255,255,255,.16)}
+    .product{display:flex;flex-direction:column;gap:10px}.price{font-weight:900;color:var(--blue)}.business{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:start}.check{display:flex;gap:10px;margin:12px 0;color:var(--muted)}.check b{color:var(--green)}
+    .service{background:#f7efe0}.faq details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}.faq summary{font-weight:800;cursor:pointer}.footer-cta{padding:54px 0 72px}.cta-box{background:var(--ink);color:white;border-radius:34px;padding:42px;text-align:center}.cta-box p{color:#cfd6de;max-width:640px;margin:0 auto 20px}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    @media(max-width:900px){.hero-grid,.consult,.split{grid-template-columns:1fr}.g3,.g4{grid-template-columns:1fr 1fr}h1{font-size:42px}.links{display:none}.section-head{display:block}}
+    @media(max-width:560px){.g3,.g4,.mix{grid-template-columns:1fr}.actions{flex-direction:column}.btn{width:100%}h1{font-size:36px}.hero{padding-top:42px}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="#"><span class="logo"></span><span>Mylco</span></a><div class="links"><a href="#catalog">Каталог</a><a href="#selection">Подбор</a><a href="#business">Юрлицам</a><a href="#services">Услуги</a><a href="#faq">FAQ</a></div><a class="navcta" href="#selection">Подобрать материал</a></nav></div></header>
+<main>
+  <section class="hero"><div class="wrap hero-grid"><div><div class="kicker">Материалы для форм, литья и малых производств</div><h1>Силиконы, смолы и материалы для форм — подберём под вашу задачу</h1><p class="lead">Силиконы, полиуретаны, эпоксидные смолы, пигменты, разделители и расходники. Поможем выбрать состав, рассчитать расход и собрать комплект без лишних ошибок.</p><div class="actions"><a class="btn primary" href="#selection">Подобрать материал</a><a class="btn secondary" href="#catalog">Перейти в каталог</a><a class="btn ghost" href="#business">Запросить счёт</a></div><div class="pill">Опт и розница · доставка по России · консультация по задаче</div></div><aside class="hero-card"><h3>Быстрый подбор</h3><p>Опишите, что будете отливать, из какого материала и сколько изделий нужно получить — предложим подходящие варианты.</p><div class="mix"><div><span class="big-num">4</span><br>вопроса для старта</div><div><span class="big-num">1</span><br>комплект под задачу</div><div>Материал</div><div>Расходники</div></div></aside></div></section>
+
+  <section><div class="wrap"><div class="section-head"><h2>Что вы хотите сделать?</h2><p>Ведём клиента не от сложных марок материалов, а от понятной задачи.</p></div><div class="grid g3">
+    <div class="card scenario"><span class="tag">Формы</span><h3>Гипс, бетон, камень</h3><p>Силикон или полиуретан, разделитель, тара и расчёт расхода.</p><a href="#selection">Подобрать →</a></div>
+    <div class="card scenario"><span class="tag">Творчество</span><h3>Свечи, мыло, декор</h3><p>Материалы для детализации, аккуратного рельефа и повторяемых заливок.</p><a href="#selection">Подобрать →</a></div>
+    <div class="card scenario"><span class="tag">Литьё</span><h3>Смолы и пластики</h3><p>Смолы, пигменты, формы, вспомогательные материалы и комплекты.</p><a href="#catalog">Смотреть →</a></div>
+    <div class="card scenario"><span class="tag">Новичку</span><h3>Не знаю, что выбрать</h3><p>Зададим 4 вопроса и предложим безопасный стартовый вариант.</p><a href="#selection">Получить подбор →</a></div>
+    <div class="card scenario"><span class="tag">Бизнес</span><h3>Опт, счёт, документы</h3><p>Закупка для мастерской, студии или небольшого производства.</p><a href="#business">Запросить счёт →</a></div>
+    <div class="card scenario"><span class="tag">Производство</span><h3>Мастер-модель или прототип</h3><p>3D-печать, сканирование, реверс-инжиниринг и подготовка модели под форму как услуги Mylco.</p><a href="#services">Обсудить →</a></div>
+  </div></div></section>
+
+  <section id="catalog" class="catalog"><div class="wrap"><div class="section-head"><h2>Основные материалы</h2><p>Каталог должен помогать выбрать категорию, а не просто показывать длинный список товаров.</p></div><div class="grid g4">
+    <div class="card"><h3>Силиконы для форм</h3><p>Для гипса, бетона, декора, свечей, мыла и мастер-моделей.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Полиуретаны</h3><p>Для прочных форм, оснастки и технических задач.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Эпоксидные смолы</h3><p>Для заливки, декора, прозрачных изделий и прототипов.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Пигменты</h3><p>Красители для смол, силиконов и декоративных материалов.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Разделители</h3><p>Чтобы форма снималась чисто и служила дольше.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Тара и инструменты</h3><p>Стаканы, весы, перчатки, мешалки и расходники.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Готовые комплекты</h3><p>Материал + расходники под типовую задачу.</p><a>Смотреть</a></div>
+    <div class="card"><h3>Для производств</h3><p>Партии, документы, регулярные закупки и подбор замен.</p><a>Подробнее</a></div>
+  </div></div></section>
+
+  <section id="selection"><div class="wrap"><div class="consult"><div><h2>Не уверены, какой материал подойдёт?</h2><p>Ошибиться с силиконом или смолой дорого: форма может рваться, липнуть, давать усадку или не выдерживать серию. Начните с задачи — Mylco подберёт материал и комплектующие.</p><a class="btn secondary" href="#">Получить подбор</a></div><div class="questions"><div class="q">1. Что будете отливать или формовать?</div><div class="q">2. Какой материал заливается в форму?</div><div class="q">3. Нужна разовая форма или серия?</div><div class="q">4. Есть ли мастер-модель, 3D-модель или образец?</div></div></div></div></section>
+
+  <section><div class="wrap"><div class="section-head"><h2>Часто берут для старта</h2><p>Блок под реальные товары: пока без выдуманных цен и остатков.</p></div><div class="grid g3">
+    <div class="card product"><span class="tag">Комплект</span><h3>Первая силиконовая форма</h3><p>База для аккуратного старта без забытых расходников.</p><span class="price">SKU и цена после сверки</span></div>
+    <div class="card product"><span class="tag">Популярное</span><h3>Силикон для гипса/бетона</h3><p>Для декоративных форм и малых серий.</p><span class="price">SKU и цена после сверки</span></div>
+    <div class="card product"><span class="tag">Комплект</span><h3>Смола + пигменты</h3><p>Для декора, сувениров и прозрачных заливок.</p><span class="price">SKU и цена после сверки</span></div>
+  </div></div></section>
+
+  <section id="business" class="business"><div class="wrap split"><div><h2>Поставки для мастерских, студий и производств</h2><p class="lead">Mylco помогает собрать закупку под технологический процесс, оформить счёт и подобрать замену, если нужного материала нет в наличии.</p><a class="btn primary" href="#">Запросить счёт</a></div><div class="card"><div class="check"><b>✓</b><span>Опт и повторные закупки</span></div><div class="check"><b>✓</b><span>Счёт и документы для юрлица</span></div><div class="check"><b>✓</b><span>Комплект: основной материал + пигменты + разделители + расходники</span></div><div class="check"><b>✓</b><span>Консультация по задаче до покупки</span></div></div></div></section>
+
+  <section id="services" class="service"><div class="wrap split"><div><span class="tag">Услуги Mylco</span><h2>Если нужна мастер-модель, прототип или оснастка</h2><p>Иногда для формы нужен не только материал, но и точная мастер-модель, 3D-модель, сканирование детали или прототип. Mylco может закрыть эту часть как единую производственную услугу.</p><a class="btn primary" href="#">Обсудить задачу</a></div><div class="grid"><div class="card"><h3>3D-печать мастер-моделей</h3><p>Для последующего снятия формы и проверки геометрии.</p></div><div class="card"><h3>3D-сканирование и реверс-инжиниринг</h3><p>Если есть образец, но нет модели или чертежа.</p></div><div class="card"><h3>Прототипирование изделий</h3><p>Перед формованием, литьём или запуском малой серии.</p></div></div></div></section>
+
+  <section><div class="wrap"><div class="section-head"><h2>Где применяют материалы Mylco</h2><p>Эти карточки потом можно превратить в SEO-страницы и инструкции.</p></div><div class="grid g3"><div class="card"><h3>Декор и интерьер</h3><p>Формы, смолы, пигменты, повторяемые изделия.</p></div><div class="card"><h3>Свечи и мыло</h3><p>Детализация, мягкость формы, удобное извлечение.</p></div><div class="card"><h3>Инженерные изделия</h3><p>Мастер-модели, прототипы, оснастка и литьё малых серий.</p></div></div></div></section>
+
+  <section id="faq" class="faq"><div class="wrap"><div class="section-head"><h2>FAQ</h2><p>Ответы снижают страх покупки и дают SEO-трафик.</p></div><div class="grid"><details open><summary>Какой силикон выбрать для гипса?</summary><p>Зависит от рельефа, тиража, жёсткости формы и условий заливки. Лучше начать с задачи и желаемой серии.</p></details><details><summary>Чем платиновый силикон отличается от оловянного?</summary><p>Различаются системой отверждения, стабильностью, совместимостью и назначением.</p></details><details><summary>Как рассчитать расход материала?</summary><p>Нужны размеры модели, опалубки и желаемая толщина формы. Можно сделать быстрый расчёт перед заказом.</p></details></div></div></section>
+
+  <section class="footer-cta"><div class="wrap"><div class="cta-box"><h2>Опишите задачу — подберём материал и комплект</h2><p>Напишите, что хотите изготовить, из чего будет заливка и сколько изделий планируете сделать. Mylco подскажет подходящие материалы, расходники и следующий шаг.</p><div class="actions" style="justify-content:center"><a class="btn secondary" href="#selection">Получить подбор</a><a class="btn ghost" style="color:white;border-color:#657080" href="#catalog">Открыть каталог</a></div></div></div></section>
+</main>
+<footer><div class="wrap">Прототип для согласования · noindex · без подключения к живому сайту</div></footer>
+</body>
+</html>
